@@ -17,11 +17,11 @@ int main()
 {
     List ipList;
 
-    // #TODO
     // Your code goes here:
     //      - generate N_IP_NUMBERS random IP numbers of type uint32_t.
     //      - add each IP number to ipList.
     //      - display ipList Nodes in (ascending) sorted order.
+    // #TODO
 
     std::cout << "This is PA09 signing off. Goodbye!\n";
 }
