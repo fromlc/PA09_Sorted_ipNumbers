@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="PA09_Sorted_ipNumbers.vcxproj" />
+  <Project Path="PA09_Sorted_ipNumbers.vcxproj" Id="606ffb7d-c8f3-4ab2-b8af-bbc9059080c9" />
 </Solution>
