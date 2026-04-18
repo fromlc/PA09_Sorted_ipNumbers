@@ -70,6 +70,9 @@ void List::addNode(uint32_t _ipNumber)
     // goes here.
     // #TODO
 
+    Node* pNode = new Node;
+    pNode->ipNumber = _ipNumber;
+
     //--------------------------------------------------------------------------
     // List insertion has four cases:
     // 
@@ -78,6 +81,12 @@ void List::addNode(uint32_t _ipNumber)
     // Your code to insert the new Node as the new list head and return
     // goes here.
     // #TODO
+
+    if (pHead == nullptr)
+    {
+        pHead = pNode;
+        return;
+    }
 
     //--------------------------------------------------------------------------
     //
@@ -152,9 +161,22 @@ void List::addNode(uint32_t _ipNumber)
 //------------------------------------------------------------------------------
 void List::displayList()
 {
-    std::cout << "Sorted ipNumbers:\n";
+    std::cout << "\nSorted ipNumbers:\n\n";
 
     // Your code to display all list Nodes goes here
     // #TODO
 
+    Node* pNode = pHead;
+    size_t total = 0;
+
+    // display each Node's ipNumber
+    while (pNode != nullptr)
+    {
+        std::cout << pNode->ipNumber << "\n";
+
+        pNode = pNode->pNext;
+        total++;
+    }
+
+    std::cout << "\nIPNumbers in list: " << total << ".\n";
 }
