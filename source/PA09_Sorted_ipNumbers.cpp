@@ -3,12 +3,16 @@
 //------------------------------------------------------------------------------
 #include "List.hpp"
 
+#include <cmath>
 #include <cstdint>
 #include <random>
 
 //------------------------------------------------------------------------------
 // constants
 //------------------------------------------------------------------------------
+// uncomment for debug mode with small random numbers
+//#define LCDEBUG 1
+
 constexpr int N_IP_NUMBERS = 10;
 
 //------------------------------------------------------------------------------
@@ -57,8 +61,11 @@ inline uint32_t generateIPNumber()
     static std::random_device rd;
     static std::mt19937 mt(rd());
 
+#ifdef LCDEBUG
     static IntDist32 distIP(1, 20);
-    //static IntDist32 distIP(1, static_cast<uint32_t>((pow(2, 32) - 1)));
+#else
+    static IntDist32 distIP(1, static_cast<uint32_t>((pow(2, 32) - 1)));
+#endif
 
     return distIP(mt);
 }
