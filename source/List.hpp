@@ -122,7 +122,6 @@ void List::addNode(uint32_t _ipNumber)
 
         pNode->pNext = pHead;
         pHead = pNode;
-
     }
 
     //--------------------------------------------------------------------------
@@ -138,6 +137,7 @@ void List::addNode(uint32_t _ipNumber)
     // Your code that inserts the new Node as the new list tail goes here.
     // #TODO
 
+        p->pNext = pNode;
     }
 
     //--------------------------------------------------------------------------
