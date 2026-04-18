@@ -156,6 +156,8 @@ void List::addNode(uint32_t _ipNumber)
     // (p and pList) goes here.
     // #TODO
 
+        pNode->pNext = pList;
+        p->pNext = pNode;
     }
 }
 

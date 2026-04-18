@@ -3,7 +3,6 @@
 //------------------------------------------------------------------------------
 #include "List.hpp"
 
-#include <cmath>
 #include <cstdint>
 #include <random>
 
@@ -58,8 +57,8 @@ inline uint32_t generateIPNumber()
     static std::random_device rd;
     static std::mt19937 mt(rd());
 
-    //uint32_t max = pow(2, 32) - 1;
-    static IntDist32 distIP(1, static_cast<uint32_t>((pow(2, 32) - 1)));
+    static IntDist32 distIP(1, 20);
+    //static IntDist32 distIP(1, static_cast<uint32_t>((pow(2, 32) - 1)));
 
     return distIP(mt);
 }
